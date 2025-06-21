@@ -87,9 +87,34 @@ int main(){
     }
     cout <<  endl;
 
-    v4.insert(v4.begin() + 1,2,10);
+    v4.insert(v4.begin() + 1,2,10); //this will add 10 in 1st and 2nd postion 
     for(auto it =v4.begin(); it != v4.end(); it++){
         cout << *(it) << " ";
     }
+    cout << endl;
+
+    v4.insert(v4.begin()+3,5); // This will add a 5 in 3rd postion
+    for(auto it = v4.begin(); it != v4.end();it++){
+        cout << *(it) << " ";
+    }
+    cout << endl;
+
+    vector<int> newVec(2,50);
+    v4.insert(v4.begin(), newVec.begin(),newVec.end());
+
+    for(auto it = v4.begin(); it != v4.end(); it++){
+        cout << *(it) << " ";
+    }
+    cout <<  endl;
+
+    cout << v4.size(); // Gives you the size of a vector
+    cout << endl;
+    v4.pop_back(); // Removes the last element
+    v4.swap(v); //swaps a vector
+    v4.clear(); // Clear the entire vector
+    cout << v4.empty(); // Tells you if you vector is empty or not returns true or false i.e 1 or 0
+    
+    // ****************************************************************** //
+    
     return 0;
 }
